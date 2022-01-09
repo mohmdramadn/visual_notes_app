@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:visual_notes_app/constants/string_constants.dart' as string_constants;
+import 'package:visual_notes_app/constants/string_constants.dart'
+    as string_constants;
 import 'package:visual_notes_app/ui/widgets/notes_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,12 +21,29 @@ class HomePage extends StatelessWidget {
         },
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
-               NoteCard(),
-            ],
-          ),
+        child: Column(
+          children: [
+            const Expanded(
+              flex: 1,
+              child: SizedBox(
+                child: Center(
+                    child: Text(
+                  'Notes',
+                  style: TextStyle(
+                    fontSize: 30,
+                  ),
+                )),
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (BuildContext context, int index) {
+                    return const NoteCard();
+                  }),
+            ),
+          ],
         ),
       ),
     );
