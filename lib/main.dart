@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:visual_notes_app/views/home_screen.dart';
+import 'package:visual_notes_app/ui/views/home_screen.dart';
+import 'constants/string_constants.dart' as string_constants;
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'V-Notes',
+      title: string_constants.appName,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
