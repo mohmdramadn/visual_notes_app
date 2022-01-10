@@ -4,9 +4,7 @@ import 'package:visual_notes_app/constants/string_constants.dart'
 import 'package:visual_notes_app/ui/widgets/notes_card.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-  final _contentController = TextEditingController();
-  final _titleController = TextEditingController();
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
