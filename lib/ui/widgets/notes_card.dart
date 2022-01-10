@@ -76,7 +76,7 @@ class NoteCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5.0),
           ),
-          tileColor: Colors.grey[350],
+          //tileColor: Colors.grey[350],
           leading: SizedBox(
             height: 100,
             child: Image.asset(
