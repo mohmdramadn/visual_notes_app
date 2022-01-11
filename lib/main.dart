@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:visual_notes_app/logic/notes_bloc.dart';
 import 'package:visual_notes_app/ui/views/home_screen.dart';
 import 'package:visual_notes_app/ui/views/new_note_screen.dart';
 import 'package:visual_notes_app/ui/views/view_note_screen.dart';
@@ -30,7 +32,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:   HomePage(),
+      home: BlocProvider<NotesBloc>(
+        create: (BuildContext context) => NotesBloc(),
+        child: const HomePage(),
+      ),
     );
   }
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SaveNoteButton extends StatelessWidget {
-  // const SaveNoteButton({Key? key}) : super(key: key);
   final String? label;
-  final Function onPressed;
+  final VoidCallback onPressed;
   final double? height;
   final bool enabled;
   final Widget? icon;
@@ -14,7 +13,7 @@ class SaveNoteButton extends StatelessWidget {
         required this.onPressed,
         required this.height,
         this.enabled = true,
-        required this.color, required this.icon,
+        required this.color, this.icon,
         }) : super(key: key);
 
   @override
@@ -55,7 +54,7 @@ class SaveNoteButton extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: (){},
+        onPressed: onPressed,
       ),
     );
   }

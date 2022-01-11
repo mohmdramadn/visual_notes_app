@@ -14,16 +14,16 @@ class NoteFields {
 }
 
 class Note {
-  final int id;
+  int? id;
   final String title;
   final String description;
   final DateTime createdDate;
   final String picture;
   final String status;
 
-  Note({required this.id, required this.title, required this.description, required this.createdDate,required this.picture,required this.status});
+  Note({this.id, required this.title, required this.description, required this.createdDate,required this.picture,required this.status});
 
-  Map<String, Object> toJson() => {
+  Map<String, Object?> toJson() => {
     NoteFields.id: id,
     NoteFields.title: title,
     NoteFields.picture: picture,

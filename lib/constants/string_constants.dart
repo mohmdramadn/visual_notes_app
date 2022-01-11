@@ -7,3 +7,4 @@ const String yesAnswer = 'Yes';
 const String cancelAnswer = 'Cancel';
 //New note screen
 const String saveText = 'Save';
+const String newNoteScreenTitle ='Add new note';
